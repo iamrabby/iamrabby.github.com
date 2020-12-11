@@ -3,9 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Rabby - Website Designer</title>
+    <!-- I need gap -->
+    <link rel="stylesheet" href="assets/design/style.css">
 </head>
 <body>
-    
+  <div class="star"></div>
+  <div id="backgrond"></div>
+  <div class="silhouette"></div>
+  <div class="moon"></div>
+
+  <section id="main">
+    <div id="particles-js"></div>
+    <header class="hero_text">
+      <div class="name">hey stranger, you find me, I do website design <span class="and">&</span> code.</div>
+      <div class="tagline">let's not be strangers <br> anymore</div>
+
+      <div class='buttonContainer'>
+        <button class="open_me js-open-modal hover_effect" id='button'><span class="hover-glow"></span> <span class="btn-text">get in touch</span></button>
+      </div>
+     
+    </header>
+  </section>
+
+  <!-- I'm here for modal -->
+  <div class="im_modal_wrapper resetButton" id="resetButton">
+    <div class="modal">
+      <div class="modal__body">
+        <button class="close js-close-modal">Close it</button>
+        <div class="modal_content">
+          <h3>let's talk</h3>
+          <div>
+            <a href="mailto:mhr.more@gmail.com" title="Send me some line" class="email">mhr.more@gmail.com</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- I'm here for something more -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- I'm here for modal -->
+  <script src="assets/script/runme.js"></script>
+  <!-- We are here for website element effect, such as button, Particles effect -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.js"></script>
+  <script src="assets/script/button_effect.js"></script>
+  <!-- I'm here for Particles effect -->
+  <script src="assets/script/ParticlesJS.js"></script>
 </body>
 </html>
