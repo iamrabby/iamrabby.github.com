@@ -336,4 +336,28 @@ body button, body a, body a:focus, body button:focus, body a:active, body button
 #particles-js canvas {
   display: block;
 }
+
+.typing-text::after {
+  content: "|";
+  -webkit-animation: blink ease 1s infinite;
+          animation: blink ease 1s infinite;
+}
+
+@-webkit-keyframes blink {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
 /*# sourceMappingURL=style.css.map */
