@@ -1,7 +1,7 @@
 var $circles = $('.circle'),
     tl = new TimelineMax(),
     random1 = getRandomNumber(),
-    imgUrl1 = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/409269/valley.jpg?' + random1,
+    imgUrl1 = '/*image url here*/' + random1,
     image1 = $('<img>');
 
 function loaderOut() {
