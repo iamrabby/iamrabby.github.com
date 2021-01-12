@@ -102,13 +102,15 @@ body button:active {
   font-weight: bold;
   border-radius: 50px;
   color: #fff;
-  background: #ff3259;
+  /*background: #ff3259;*/
+  background: #17181d;
   width: 235px;
   z-index: 2;
 }
 
 .open_me:hover {
-  background: #ff4366;
+  /*background: #ff4366;*/
+  background: #17181d;
 }
 
 .enableReset {
@@ -168,7 +170,12 @@ body button:active {
 .hover-glow {
   height: 95px;
   width: 150px;
-  background: radial-gradient(circle closest-side, #ff5d7b, transparent);
+  /*background: radial-gradient(
+    circle closest-side,
+    rgb(255, 93, 123),
+    transparent
+  );*/
+  background: radial-gradient(circle closest-side, #221e1e, transparent);
   position: absolute;
   border-radius: 100%;
   z-index: 1;
