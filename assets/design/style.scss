@@ -33,68 +33,12 @@ body {
   button:focus,
   a:active,
   button:active {
+    border: 0;
     outline: none;
     text-decoration: none;
     font-family: Coyote, sans-serif;
+    cursor: none;
   }
-}
-
-.star {
-  position: relative;
-
-  &::before {
-    content: "";
-    position: fixed;
-    background: url(../../images/stars.svg);
-    background-attachment: fixed;
-    background-size: 40%;
-    width: 100%;
-    min-height: 100vh;
-    z-index: 0;
-    opacity: 0.6;
-    -webkit-animation: stars-move-in 1000ms 300ms forwards;
-    animation: stars-move-in 1000ms 300ms forwards;
-  }
-}
-
-#backgrond {
-  background-image: url(../../images/trees.svg);
-  background-position: center bottom;
-  background-repeat: no-repeat;
-  background-size: 100% auto;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.silhouette {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  background: url(../../images/silhouette.svg) bottom center no-repeat;
-  width: 50%;
-  height: 50%;
-  opacity: 1;
-  -webkit-animation: silhouette-move-in 1000ms 800ms forwards;
-  animation: silhouette-move-in 1000ms 800ms forwards;
-}
-
-.moon {
-  position: absolute;
-  top: 0;
-  right: 0;
-  position: fixed;
-  background: url(../../images/moon.svg) right 4% no-repeat;
-  background-size: 36% 22%;
-  background-attachment: fixed;
-  width: 100%;
-  height: 100%;
-  z-index: 2;
-  opacity: 1;
-  -webkit-animation: moon-move-in 1.2s 1s forwards;
-  animation: moon-move-in 1.2s 1s forwards;
 }
 
 #main {
@@ -151,6 +95,7 @@ body {
   margin-right: auto;
 
   .open_me {
+    display: inline-block;
     font-size: 17px;
     padding: 16px 37px;
     border: none;
@@ -158,7 +103,6 @@ body {
     border-radius: 50px;
     color: #fff;
     background: #ff3259;
-    cursor: pointer;
     width: 235px;
     z-index: 2;
   }
@@ -166,7 +110,6 @@ body {
 
 .open_me:hover {
   background: #ff4366;
-  cursor: pointer;
 }
 
 .enableReset {
@@ -245,7 +188,6 @@ body {
   width: 100%;
   height: 100%;
   background-color: rgba(34, 65, 84, 0.45);
-  cursor: zoom-out;
 
   &.visible {
     display: block;
@@ -264,7 +206,6 @@ body {
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    cursor: auto;
   }
 }
 
@@ -280,22 +221,22 @@ body {
 
   .close {
     position: absolute;
-    top: -99px;
-    right: 12px;
+    top: -98px;
+    right: 7px;
     font-weight: bold;
-    border: 0;
     font-size: 16px;
     color: #ffffff;
     background: transparent;
-    line-height: 38px;
+    line-height: 18px;
+    padding: 10px;
     text-align: center;
-    cursor: pointer;
   }
 
   .email {
     color: #fff;
     display: inline-block;
     position: relative;
+    padding: 4px 4px 0px 4px;
 
     &:before {
       border-bottom: 2px solid rgba(255, 255, 255, 0.21);
@@ -353,50 +294,19 @@ body {
 }
 
 /* Circle cursor with blend mode */
-.cursor {
-  display: none;
+.custom-cursor {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: var(--width);
-  height: var(--height);
-  transform: translate(
-    calc(var(--x) - var(--width) / 2),
-    calc(var(--y) - var(--height) / 2)
-  );
-  /* transition-duration: 125ms;
-    transition-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
-    transition-property: width, height, transform; */
-  transition: 150ms width cubic-bezier(0.39, 0.575, 0.565, 1),
-    150ms height cubic-bezier(0.39, 0.575, 0.565, 1),
-    150ms transform cubic-bezier(0.39, 0.575, 0.565, 1);
-  z-index: 9999;
-  pointer-events: none;
-  will-change: transform;
-
-  &::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-radius: var(--radius);
-    border: 2px solid #ffffff;
-    opacity: var(--scale);
-    -webkit-transform: scale(var(--scale));
-    transform: scale(var(--scale));
-    transition: 300ms opacity cubic-bezier(0.39, 0.575, 0.565, 1),
-      300ms transform cubic-bezier(0.39, 0.575, 0.565, 1),
-      150ms border-radius cubic-bezier(0.39, 0.575, 0.565, 1);
-  }
-}
-@media (pointer: fine) {
-  .cursor {
-    display: block;
-  }
-}
-html:not(html:hover) .cursor::after {
   opacity: 0;
-  transform: scale(0);
+  pointer-events: none;
+  mix-blend-mode: difference;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: white;
+  transition: transform 350ms ease;
+  transform: translate(-50%, -50%) scale(0.3);
+  z-index: 1000;
+}
+.custom-cursor--link {
+  transform: translate(-50%, -50%) scale(1);
 }
