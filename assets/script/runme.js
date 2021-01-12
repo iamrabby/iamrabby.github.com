@@ -1,3 +1,10 @@
+// jQuery Lazy Loading
+$(document).ready(function(){
+	$('.preloader').hide();
+});
+// jQuery Lazy Loading for image
+$("img.lazy").lazyload({effect: "slideDown"});
+
 // Modal script
 $(".js-open-modal").click(function(){
     $(".im_modal_wrapper").addClass("visible");

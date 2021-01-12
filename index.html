@@ -14,6 +14,11 @@
     <link rel="stylesheet" href="assets/design/style.css" />
   </head>
   <body>
+    <div class="preloader">
+      <div class="circle circle1"></div>
+      <div class="circle circle2"></div>
+      <div class="circle circle3"></div>
+    </div>
     <div class="custom-cursor"></div>
 
     <section id="main">
@@ -34,7 +39,7 @@
           class="image"
         />
         <div class="name">
-          I'm Rabby <img class="itsme" src="images/itsme.jpg" />, I'm a
+          I'm Rabby <img class="itsme lazy" src="images/itsme.jpg" />, I'm a
           <span class="typing-text"></span>
         </div>
 
@@ -81,6 +86,8 @@
 
     <!-- I'm here for something more -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- I'm here for lazyload -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.js"></script>
     <!-- We are here for website element effect, such as button, Particles effect -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.js"></script>
@@ -88,8 +95,10 @@
     <script src="assets/script/button_effect.js"></script>
     <!-- I'm here for typing effect -->
     <script src="assets/script/typing.js"></script>
-    <!-- I'm here for cursor -->
+    <!-- I'm here for cursor, preloader -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+    <!-- I'm here for preloader -->
+    <script src="assets/script/preloader.js"></script>
     <!-- I'm here for modal, button, particles.js, cursor -->
     <script src="assets/script/runme.js"></script>
   </body>
