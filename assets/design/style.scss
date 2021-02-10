@@ -71,7 +71,14 @@ body {
   -webkit-transform: translate(0%, -50%);
   transform: translate(0%, -50%);
   color: white;
-
+  img{
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    transform-style: preserve-3d;
+    display: block;
+    max-width: 150px;
+    width: auto;
+  }
   .name {
     font-size: 19px;
     color: #cecece;

@@ -72,6 +72,17 @@ body img {
   color: white;
 }
 
+.hero_text img {
+  opacity: 1;
+  -webkit-transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+          transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  display: block;
+  max-width: 150px;
+  width: auto;
+}
+
 .hero_text .name {
   font-size: 19px;
   color: #cecece;
