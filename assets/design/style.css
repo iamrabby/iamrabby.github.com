@@ -59,7 +59,6 @@ body img {
           justify-content: center;
   z-index: 3;
   position: absolute;
-  /*background: radial-gradient(rgba(13, 6, 11, 0), rgba(13, 6, 11, 1));*/
   background: radial-gradient(rgba(13, 6, 11, 0), rgba(13, 6, 11, 0.4));
   position: relative;
 }
@@ -368,17 +367,19 @@ body img {
   width: 75px;
   height: 75px;
   border-radius: 50%;
-  background-color: white;
+  background-color: transparent;
+  border: 2px solid #fff;
   -webkit-transition: -webkit-transform 350ms ease;
   transition: -webkit-transform 350ms ease;
   transition: transform 350ms ease;
   transition: transform 350ms ease, -webkit-transform 350ms ease;
-  -webkit-transform: translate(-50%, -50%) scale(0.3);
-          transform: translate(-50%, -50%) scale(0.3);
+  -webkit-transform: translate(-50%, -50%) scale(0.5);
+          transform: translate(-50%, -50%) scale(0.5);
   z-index: 1000;
 }
 
 .custom-cursor--link {
+  background-color: #ffffff;
   -webkit-transform: translate(-50%, -50%) scale(1);
           transform: translate(-50%, -50%) scale(1);
 }
