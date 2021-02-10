@@ -64,15 +64,16 @@ body img {
   position: relative;
 }
 
-.hero_text {
+/*.hero_text {
   position: absolute;
   top: 50%;
   -webkit-transform: translate(0%, -50%);
-  transform: translate(0%, -50%);
+  transform: translate(0%, -50%);*/
+#main {
   color: white;
 }
 
-.hero_text img {
+#main img {
   opacity: 1;
   -webkit-transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
           transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
@@ -83,12 +84,12 @@ body img {
   width: auto;
 }
 
-.hero_text .name {
+#main .name {
   font-size: 19px;
   color: #cecece;
 }
 
-.hero_text .name .itsme {
+#main .name .itsme {
   display: inline-block;
   width: 28px;
   vertical-align: sub;
@@ -105,7 +106,7 @@ body img {
   transform: scale(1);
 }
 
-.hero_text .name .itsme:hover {
+#main .name .itsme:hover {
   -webkit-box-shadow: 0px 0px 150px #000000;
           box-shadow: 0px 0px 150px #000000;
   z-index: 2;
@@ -119,11 +120,11 @@ body img {
   transform: scale(5.5);
 }
 
-.hero_text .name .and {
+#main .name .and {
   color: #ff3259;
 }
 
-.hero_text .tagline {
+#main .tagline {
   font-size: 55px;
 }
 
@@ -138,7 +139,6 @@ body img {
 
 .buttonContainer {
   margin-top: 3em;
-  margin-left: auto;
   margin-right: auto;
 }
 
